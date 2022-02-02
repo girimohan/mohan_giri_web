@@ -61,17 +61,48 @@ switch($my_score){
     echo "Something else <br>";
 }
 #4
+/*
+readline();
 $name = readline('Enter your name: ');
 $age = (int)readline('Enter your age: ');
 echo "$name";
-/*if($name >= 18){
+if($name >= 18){
     echo"Hi $name, you are $age and eligible for voting.";
 }
 else{
     echo"Sorry $name, You are $age and  NOT eligible for voting.";
 }*/
-
-
-
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form method='POST'>
+    <h2>Please input your name and age:</h2>
+            <input type="text" name="name">
+            <input type="int" name="age">
+            <input type="submit" value="Submit">
+    </form>
+<?php
+//Retrieve name from query string and store to a local variable
+$name = $_POST['name'];
+$age = $_POST['age'];
+if($age >= 18){
+    echo"<h4>Hi $name, you are $age and eligible for voting.</h4>";
+}
+else{
+    echo"<h4>Sorry $name, You are $age and  NOT eligible for voting.</h4>";
+}
+?>
+</body>
+</html>
+
+
+
+
