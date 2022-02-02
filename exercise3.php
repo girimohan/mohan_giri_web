@@ -60,27 +60,17 @@ switch($my_score){
     default:
     echo "Something else <br>";
 }
-#4
-/*
-readline();
-$name = readline('Enter your name: ');
-$age = (int)readline('Enter your age: ');
-echo "$name";
-if($name >= 18){
-    echo"Hi $name, you are $age and eligible for voting.";
-}
-else{
-    echo"Sorry $name, You are $age and  NOT eligible for voting.";
-}*/
+
 ?>
 
+<!--question 4-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>Exercise3</title>
 </head>
 <body>
     <form method='POST'>
@@ -99,7 +89,35 @@ if($age >= 18){
 else{
     echo"<h4>Sorry $name, You are $age and  NOT eligible for voting.</h4>";
 }
+
+#5
+echo"<h4>Number pattern</h4>";
+for($i=8; $i>=1; $i--)
+{
+    for($j=1; $j<=$i; $j++)
+    {
+        echo $j;
+    }
+    echo"<br>";
+}
+
+#6
+echo"<h4>Pattern with while loop.</h4>";
+$i = 1;
+while($i<=8){
+    $j=1;
+    while($j<=$i){
+        $j++;
+        echo"*";
+    }
+    $i++;
+    echo"<br>";
+}
+
+
 ?>
+<a href="https://github.com/girimohan/project-gym">Github repo Link</a><br>
+<a href="https://girimohan.github.io/project-gym/index.html">Project1-website Link</a>
 </body>
 </html>
 
